@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroTech - Composants Électroniques & Kits Arduino</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header avec design électronique -->
+    <header>
+        <div class="circuit-line"></div>
+        <div class="container">
+            <div id="logo">
+                <div class="led-box">
+                    <div class="led led-red"></div>
+                    <div class="led led-green"></div>
+                    <div class="led led-blue"></div>
+                </div>
+                <h1>Electro<span>Tech</span></h1>
+                <p>Composants et projets électroniques</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link active" data-section="home"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="#" class="nav-link" data-section="products"><i class="fas fa-microchip"></i> Composants</a></li>
+                    <li><a href="#" class="nav-link" data-section="projects"><i class="fas fa-project-diagram"></i> Projets</a></li>
+                    <li><a href="#" class="nav-link" data-section="courses"><i class="fas fa-book"></i> Cours</a></li>
+                    <li><a href="#" class="nav-link" data-section="cart"><i class="fas fa-shopping-cart"></i> Panier (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="#" class="nav-link" data-section="admin"><i class="fas fa-cogs"></i> Admin</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-background">
+                    <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1581094288338-231b058b38b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1581093458799-1084c2f12b29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="hero-content">
+                    <div class="container">
+                        <h2>Bienvenue <span>ElectroTech</span></h2>
+                        <p>Votre source pour tous les composants électroniques, projets robotiques et ressources pédagogiques</p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" data-section="products">Découvrir nos produits</button>
+                            <button class="btn btn-secondary" data-section="projects">Voir les projets</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3>Composants</h3>
+                        <p>Large sélection de composants électroniques de qualité</p>
+                        <button class="btn btn-secondary" data-section="products">Voir tout</button>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>Projets</h3>
+                        <p>Des projets concrets en robotique et électronique</p>
+                        <button class="btn btn-secondary" data-section="projects">Explorer</button>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Cours</h3>
+                        <p>Apprenez avec nos ressources pédagogiques</p>
+                        <button class="btn btn-secondary" data-section="courses">Commencer</button>
+                    </div>
+                </div>
+
+                <div class="robotics-showcase">
+                    <h2>Découvrez l'Électronique et la Robotique</h2>
+                    <div class="showcase-grid">
+                        <div class="showcase-item">
+                            <img src="https://images.unsplash.com/photo-1581094288338-231b058b38b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Enfants programmant un robot">
+                            <div class="showcase-content">
+                                <h3>Ateliers Jeunesse</h3>
+                                <p>Initiation à la robotique pour les jeunes passionnés</p>
+                            </div>
+                        </div>
+                        <div class="showcase-item">
+                            <img src="https://images.unsplash.com/photo-1581093458799-1084c2f12b29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Robot éducatif">
+                            <div class="showcase-content">
+                                <h3>Kits Éducatifs</h3>
+                                <p>Matériel pédagogique pour tous les niveaux</p>
+                            </div>
+                        </div>
+                        <div class="showcase-item">
+                            <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Projet Arduino">
+                            <div class="showcase-content">
+                                <h3>Projets Arduino</h3>
+                                <p>Créez vos propres systèmes automatisés</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials">
+                    <h2>Ce que disent nos clients</h2>
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"J'ai trouvé tous les composants nécessaires pour mon projet de robotique scolaire. Service rapide et produits de qualité!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <h4>Marie L.</h4>
+                                <p>Enseignante en technologie</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Les kits proposés sont parfaits pour initier les enfants à l'électronique. Mes élèves adorent leurs ateliers!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <h4>Thomas D.</h4>
+                                <p>Animateur scientifique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-microchip"></i> Nos Composants Électroniques</h2>
+                <div class="filters">
+                    <select id="category-filter">
+                        <option value="all">Toutes les catégories</option>
+                        <option value="arduino">Arduino</option>
+                        <option value="capteurs">Capteurs</option>
+                        <option value="moteurs">Moteurs</option>
+                        <option value="leds">LEDs</option>
+                        <option value="resistances">Résistances</option>
+                        <option value="kits">Kits complets</option>
+                    </select>
+                    <div class="search-box">
+                        <input type="text" id="search-products" placeholder="Rechercher un composant...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div id="products-list" class="products-grid">
+                    <!-- Products will be loaded here dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-project-diagram"></i> Projets Robotiques et Électroniques</h2>
+                <div id="projects-list" class="projects-grid">
+                    <!-- Projects will be loaded here dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-book"></i> Cours et Ressources</h2>
+                <div id="courses-list" class="courses-grid">
+                    <!-- Courses will be loaded here dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section id="cart" class="section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-shopping-cart"></i> Votre Panier</h2>
+                <div id="cart-items"></div>
+                <div class="cart-total">
+                    <h3>Total: <span id="cart-total-price">0</span> €</h3>
+                    <button id="checkout-btn" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i> Passer commande via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin Section -->
+        <section id="admin" class="section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-cogs"></i> Espace Administrateur</h2>
+                <div class="admin-tabs">
+                    <button class="tab-btn active" data-tab="add-product">
+                        <i class="fas fa-plus-circle"></i> Ajouter un produit
+                    </button>
+                    <button class="tab-btn" data-tab="add-project">
+                        <i class="fas fa-project-diagram"></i> Ajouter un projet
+                    </button>
+                    <button class="tab-btn" data-tab="add-course">
+                        <i class="fas fa-book"></i> Ajouter un cours
+                    </button>
+                    <button class="tab-btn" data-tab="manage">
+                        <i class="fas fa-tasks"></i> Gérer le contenu
+                    </button>
+                </div>
+
+                <div id="add-product" class="tab-content active">
+                    <h3>Ajouter un nouveau produit</h3>
+                    <form id="product-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="product-name">Nom du produit</label>
+                                <input type="text" id="product-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="product-price">Prix (€)</label>
+                                <input type="number" id="product-price" step="0.01" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="product-category">Catégorie</label>
+                                <select id="product-category" required>
+                                    <option value="arduino">Arduino</option>
+                                    <option value="capteurs">Capteurs</option>
+                                    <option value="moteurs">Moteurs</option>
+                                    <option value="leds">LEDs</option>
+                                    <option value="resistances">Résistances</option>
+                                    <option value="kits">Kits complets</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="product-stock">Stock</label>
+                                <input type="number" id="product-stock" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-description">Description</label>
+                            <textarea id="product-description" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-image">Image</label>
+                            <div class="file-upload">
+                                <input type="file" id="product-image" accept="image/*">
+                                <label for="product-image" class="file-label">
+                                    <i class="fas fa-upload"></i> Choisir une image
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Ajouter le produit
+                        </button>
+                    </form>
+                </div>
+
+                <div id="add-project" class="tab-content">
+                    <h3>Ajouter un nouveau projet</h3>
+                    <form id="project-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="project-name">Nom du projet</label>
+                                <input type="text" id="project-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="project-difficulty">Niveau de difficulté</label>
+                                <select id="project-difficulty" required>
+                                    <option value="débutant">Débutant</option>
+                                    <option value="intermédiaire">Intermédiaire</option>
+                                    <option value="avancé">Avancé</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="project-description">Description</label>
+                            <textarea id="project-description" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="project-image">Image</label>
+                            <div class="file-upload">
+                                <input type="file" id="project-image" accept="image/*">
+                                <label for="project-image" class="file-label">
+                                    <i class="fas fa-upload"></i> Choisir une image
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="project-pdf">Notice (PDF)</label>
+                            <div class="file-upload">
+                                <input type="file" id="project-pdf" accept=".pdf">
+                                <label for="project-pdf" class="file-label">
+                                    <i class="fas fa-file-pdf"></i> Choisir un fichier PDF
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Ajouter le projet
+                        </button>
+                    </form>
+                </div>
+
+                <div id="add-course" class="tab-content">
+                    <h3>Ajouter un nouveau cours</h3>
+                    <form id="course-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="course-title">Titre du cours</label>
+                                <input type="text" id="course-title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="course-level">Niveau</label>
+                                <select id="course-level" required>
+                                    <option value="débutant">Débutant</option>
+                                    <option value="intermédiaire">Intermédiaire</option>
+                                    <option value="avancé">Avancé</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="course-description">Description</label>
+                            <textarea id="course-description" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="course-pdf">Document du cours (PDF)</label>
+                            <div class="file-upload">
+                                <input type="file" id="course-pdf" accept=".pdf">
+                                <label for="course-pdf" class="file-label">
+                                    <i class="fas fa-file-pdf"></i> Choisir un fichier PDF
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Ajouter le cours
+                        </button>
+                    </form>
+                </div>
+
+                <div id="manage" class="tab-content">
+                    <h3>Gérer le contenu</h3>
+                    <div class="manage-tabs">
+                        <button class="manage-tab-btn active" data-manage-tab="products">
+                            <i class="fas fa-microchip"></i> Produits
+                        </button>
+                        <button class="manage-tab-btn" data-manage-tab="projects">
+                            <i class="fas fa-project-diagram"></i> Projets
+                        </button>
+                        <button class="manage-tab-btn" data-manage-tab="courses">
+                            <i class="fas fa-book"></i> Cours
+                        </button>
+                    </div>
+                    
+                    <div id="manage-products" class="manage-tab-content active">
+                        <h4>Liste des produits</h4>
+                        <div id="admin-products-list"></div>
+                    </div>
+                    
+                    <div id="manage-projects" class="manage-tab-content">
+                        <h4>Liste des projets</h4>
+                        <div id="admin-projects-list"></div>
+                    </div>
+                    
+                    <div id="manage-courses" class="manage-tab-content">
+                        <h4>Liste des cours</h4>
+                        <div id="admin-courses-list"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ElectroTech</h3>
+                    <p>Votre partenaire pour tous vos projets électroniques et robotiques.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="#" data-section="products">Composants</a></li>
+                        <li><a href="#" data-section="projects">Projets</a></li>
+                        <li><a href="#" data-section="courses">Cours</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/yournumber" id="whatsapp-link">WhatsApp</a></p>
+                    <p><i class="fas fa-envelope"></i> contact@electrotech.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ElectroTech - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-product-details"></div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
